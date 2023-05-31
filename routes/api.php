@@ -1,5 +1,5 @@
 <?php
-
+use App\Http\Controllers\ApiAuthController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MahasiswaController;
@@ -29,3 +29,5 @@ Route:: get('/hello', function(){
 // });
 
 Route::apiResource('/mahasiswa', MahasiswaController::class);
+
+Route::post('/login', [ApiAuthController::class, 'login']);
